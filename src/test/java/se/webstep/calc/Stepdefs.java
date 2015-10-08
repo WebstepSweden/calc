@@ -14,7 +14,7 @@ public class Stepdefs {
         calc.reset();
     }
 
-    @När("^jag lägger till (.+)$")
+    @När("^jag adderar (.+)$")
     public void i_add(double number) throws Throwable {
         calc.plus(number);
     }
