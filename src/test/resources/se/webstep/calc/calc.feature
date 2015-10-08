@@ -4,13 +4,13 @@
 Egenskap: Beräkningar med miniräknaren
 
   Scenario: När jag nollställer miniräknaren ska resultatet vara 0
-    Givet  jag nollställer miniräknaren
+    Givet jag nollställer miniräknaren
     Så ska resultatet vara 0
 
   Abstrakt Scenario: Addition av två heltal ska ge korrekt resultat
     Givet jag nollställer miniräknaren
     När jag adderar <första talet>
-    När jag adderar <andra talet>
+    Och jag adderar <andra talet>
     Så ska resultatet vara <resultat>
 
     Exempel:
