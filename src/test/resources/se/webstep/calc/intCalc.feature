@@ -17,4 +17,4 @@ Egenskap: Beräkningar med miniräknaren
       | första talet | andra talet | resultat |
       | 3            | 5           | 8        |
       | 20           | 7           | 27       |
-      | -6           | -8          | -14      |
+      | 6            | 8           | 14       |

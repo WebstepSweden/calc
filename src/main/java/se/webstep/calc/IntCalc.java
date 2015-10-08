@@ -1,29 +1,25 @@
 package se.webstep.calc;
 
-public class Calc {
+public class IntCalc {
 
-    private double value;
+    private int value;
 
     /**
      * Add a number to the current value
      *
      * @param number the number to add
-     * @return the Calc instance
      */
-    public Calc plus(double number) {
+    public void plus(Integer number) {
         this.value += number;
-        return this;
     }
 
     /**
      * Substract a number from the current value
      *
      * @param number the number to substract
-     * @return the Calc instance
      */
-    public Calc minus(double number) {
-        plus(-1D * number);
-        return this;
+    public void minus(Integer number) {
+        plus(-1 * number);
     }
 
     /**
@@ -31,17 +27,14 @@ public class Calc {
      *
      * @return the current value
      */
-    public double result() {
+    public int result() {
         return value;
     }
 
     /**
      * Reset the current value
-     *
-     * @return the Calc instance
      */
-    public Calc reset() {
+    public void reset() {
         this.value = 0;
-        return this;
     }
 }
