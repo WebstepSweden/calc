@@ -1,11 +1,16 @@
 package se.webstep.calc.troll.number;
 
+import se.webstep.calc.troll.exception.WrongTrollNumberException;
+
+import java.util.Arrays;
+import java.util.Optional;
+
 public enum SimpleTrollNumber implements TrollNumber {
 
-    ONE(1, "One"),
-    TWO(2, "Two"),
-    THREE(3, "Three"),
-    FOUR(4, "Four");
+    ONE(1, "ONE"),
+    TWO(2, "TWO"),
+    THREE(3, "THREE"),
+    MANY(4, "MANY");
 
     private int value;
     private String text;
@@ -23,5 +28,17 @@ public enum SimpleTrollNumber implements TrollNumber {
     @Override
     public String getText() {
         return text;
+    }
+
+    public static SimpleTrollNumber getFromValue(int value) {
+        Optional<SimpleTrollNumber> trollNumber = Arrays.stream(values())
+                .filter(v -> v.value == value)
+                .findFirst();
+
+        if (trollNumber.isPresent()) {
+            return trollNumber.get();
+        } else {
+            throw new WrongTrollNumberException("Troll don't think " + value + " is troll number");
+        }
     }
 }

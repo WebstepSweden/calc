@@ -7,7 +7,7 @@ import org.junit.Assert;
 
 public class IntCalcSteps {
 
-    private Calc calc = new IntCalc();
+    private IntCalc calc = new IntCalc();
 
     @Givet("^jag nollställer miniräknaren$")
     public void i_reset_the_calculator() throws Throwable {

@@ -19,6 +19,11 @@ public class ComplexTrollNumber implements TrollNumber {
 
     @Override
     public String getText() {
+
+        if (getValue() == 16) {
+            return "LOTS";
+        }
+
         return numbers.stream()
                 .map(TrollNumber::getText)
                 .collect(Collectors.joining("-"));

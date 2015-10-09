@@ -8,10 +8,11 @@ public class TrollCalc {
     private TrollNumber trollNumber;
 
     public void plus(String trollNumber) {
-        this.trollNumber = TrollUtils.parseTrollNumbers(trollNumber);
+        int value = result() + TrollUtils.parseTrollNumbers(trollNumber).getValue();
+        this.trollNumber = TrollUtils.parseTrollNumber(value);
     }
 
-    public void minus(TrollNumber number) {
+    public void minus(String trollNumber) {
 
     }
 
