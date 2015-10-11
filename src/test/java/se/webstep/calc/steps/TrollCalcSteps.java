@@ -1,8 +1,9 @@
-package se.webstep.calc;
+package se.webstep.calc.steps;
 
 import cucumber.api.java.sv.Givet;
 import cucumber.api.java.sv.Så;
 import org.junit.Assert;
+import se.webstep.calc.TrollCalc;
 
 public class TrollCalcSteps {
 

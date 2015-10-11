@@ -1,9 +1,10 @@
-package se.webstep.calc;
+package se.webstep.calc.steps;
 
 import cucumber.api.java.da.Givet;
 import cucumber.api.java.sv.När;
 import cucumber.api.java.sv.Så;
 import org.junit.Assert;
+import se.webstep.calc.IntCalc;
 
 public class IntCalcSteps {
 

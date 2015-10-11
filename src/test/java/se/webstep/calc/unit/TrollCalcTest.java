@@ -1,7 +1,8 @@
-package se.webstep.calc;
+package se.webstep.calc.unit;
 
 import org.junit.Before;
 import org.junit.Test;
+import se.webstep.calc.TrollCalc;
 import se.webstep.calc.troll.exception.TrollsDontDoBigNumbersException;
 
 import static org.junit.Assert.assertEquals;
