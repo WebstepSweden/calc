@@ -1,8 +1,9 @@
 package se.webstep.calc.steps;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import cucumber.api.java.sv.Givet;
 import cucumber.api.java.sv.Så;
-import org.junit.Assert;
 import se.webstep.calc.TrollCalc;
 
 public class TrollCalcSteps {
@@ -16,6 +17,6 @@ public class TrollCalcSteps {
 
     @Så("^ska trollresultatet vara (\\d+)$")
     public void result_should_be(int number) throws Throwable {
-        Assert.assertEquals(number, calc.result(), 0);
+        assertThat(calc.result()).isEqualTo(number);
     }
 }

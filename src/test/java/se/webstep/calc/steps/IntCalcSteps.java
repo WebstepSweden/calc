@@ -1,9 +1,10 @@
 package se.webstep.calc.steps;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import cucumber.api.java.da.Givet;
 import cucumber.api.java.sv.När;
 import cucumber.api.java.sv.Så;
-import org.junit.Assert;
 import se.webstep.calc.IntCalc;
 
 public class IntCalcSteps {
@@ -22,6 +23,6 @@ public class IntCalcSteps {
 
     @Så("^ska resultatet vara (\\d+)$")
     public void result_should_be(int number) throws Throwable {
-        Assert.assertEquals(number, calc.result(), 0);
+        assertThat(calc.result()).isEqualTo(number);
     }
 }
