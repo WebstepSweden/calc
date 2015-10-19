@@ -1,4 +1,4 @@
-package se.webstep.calc.troll.number;
+package se.webstep.calc;
 
 /**
  * A troll number, inspired by Terry Pratchett's Discworld description of how troll count.
@@ -12,14 +12,14 @@ package se.webstep.calc.troll.number;
  * <p>
  * The following exceptions can be thrown while constructing a troll number:
  * <ul>
- * <li>{@link se.webstep.calc.troll.exception.WrongTrollNumberException} if the number cannot be parsed or is equal to zero</li>
- * <li>{@link se.webstep.calc.troll.exception.TrollsDontDoBigNumbersException} if the number is bigger than "LOTS" (16)</li>
- * <li>{@link se.webstep.calc.troll.exception.TrollsDontDoNegativeNumbersException} if the number is negative</li>
+ * <li>{@link se.webstep.calc.exception.WrongTrollNumberException} if the number cannot be parsed or is equal to zero</li>
+ * <li>{@link se.webstep.calc.exception.TrollsDontDoBigNumbersException} if the number is bigger than "LOTS" (16)</li>
+ * <li>{@link se.webstep.calc.exception.TrollsDontDoNegativeNumbersException} if the number is negative</li>
  * </ul>
  *
  * @see <a href="https://en.wikipedia.org/wiki/Troll_(Discworld)#Literacy_and_Numeracy">Terry Pratchett's Discworld: Trolls - Literacy and Numeracy</a>
  */
-public interface TrollNumber {
+interface TrollNumber {
 
     /**
      * Get the numeric value of the troll number

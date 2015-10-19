@@ -1,4 +1,4 @@
-package se.webstep.calc.troll.exception;
+package se.webstep.calc.exception;
 
 /**
  * An exception that should be thrown when trying to construct a negative troll number

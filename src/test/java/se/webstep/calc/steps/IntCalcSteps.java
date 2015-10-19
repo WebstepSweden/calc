@@ -1,11 +1,11 @@
 package se.webstep.calc.steps;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 import cucumber.api.java.da.Givet;
 import cucumber.api.java.sv.När;
 import cucumber.api.java.sv.Så;
 import se.webstep.calc.IntCalc;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class IntCalcSteps {
 

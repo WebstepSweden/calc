@@ -1,4 +1,4 @@
-package se.webstep.calc.troll.number;
+package se.webstep.calc;
 
 import java.util.List;
 import java.util.stream.Collectors;

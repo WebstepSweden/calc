@@ -3,9 +3,9 @@ package se.webstep.calc.unit;
 import org.junit.Before;
 import org.junit.Test;
 import se.webstep.calc.TrollCalc;
-import se.webstep.calc.troll.exception.TrollsDontDoBigNumbersException;
-import se.webstep.calc.troll.exception.TrollsDontDoNegativeNumbersException;
-import se.webstep.calc.troll.exception.WrongTrollNumberException;
+import se.webstep.calc.exception.TrollsDontDoBigNumbersException;
+import se.webstep.calc.exception.TrollsDontDoNegativeNumbersException;
+import se.webstep.calc.exception.WrongTrollNumberException;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

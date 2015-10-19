@@ -1,6 +1,6 @@
-package se.webstep.calc.troll.number;
+package se.webstep.calc;
 
-import se.webstep.calc.troll.exception.WrongTrollNumberException;
+import se.webstep.calc.exception.WrongTrollNumberException;
 
 import java.util.Arrays;
 import java.util.Optional;

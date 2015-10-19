@@ -1,8 +1,5 @@
 package se.webstep.calc;
 
-import se.webstep.calc.troll.number.TrollNumber;
-import se.webstep.calc.troll.number.TrollUtils;
-
 /**
  * A troll calculator, inspired by Terry Pratchett's Discworld description of how troll count.
  * <p>
@@ -27,9 +24,9 @@ import se.webstep.calc.troll.number.TrollUtils;
  * <p>
  * The following exceptions can be thrown while manipulating with the calculator:
  * <ul>
- * <li>{@link se.webstep.calc.troll.exception.WrongTrollNumberException} if the number cannot be parsed or is equal to zero</li>
- * <li>{@link se.webstep.calc.troll.exception.TrollsDontDoBigNumbersException} if the number is bigger than "LOTS" (16)</li>
- * <li>{@link se.webstep.calc.troll.exception.TrollsDontDoNegativeNumbersException} if the number is negative</li>
+ * <li>{@link se.webstep.calc.exception.WrongTrollNumberException} if the number cannot be parsed or is equal to zero</li>
+ * <li>{@link se.webstep.calc.exception.TrollsDontDoBigNumbersException} if the number is bigger than "LOTS" (16)</li>
+ * <li>{@link se.webstep.calc.exception.TrollsDontDoNegativeNumbersException} if the number is negative</li>
  * </ul>
  *
  * @see <a href="https://en.wikipedia.org/wiki/Troll_(Discworld)#Literacy_and_Numeracy">Terry Pratchett's Discworld: Trolls - Literacy and Numeracy</a>

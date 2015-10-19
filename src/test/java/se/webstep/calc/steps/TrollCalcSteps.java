@@ -1,10 +1,10 @@
 package se.webstep.calc.steps;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 import cucumber.api.java.sv.Givet;
 import cucumber.api.java.sv.Så;
 import se.webstep.calc.TrollCalc;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class TrollCalcSteps {
 

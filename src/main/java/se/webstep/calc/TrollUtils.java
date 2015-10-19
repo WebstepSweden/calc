@@ -1,8 +1,8 @@
-package se.webstep.calc.troll.number;
+package se.webstep.calc;
 
-import se.webstep.calc.troll.exception.TrollsDontDoBigNumbersException;
-import se.webstep.calc.troll.exception.TrollsDontDoNegativeNumbersException;
-import se.webstep.calc.troll.exception.WrongTrollNumberException;
+import se.webstep.calc.exception.TrollsDontDoBigNumbersException;
+import se.webstep.calc.exception.TrollsDontDoNegativeNumbersException;
+import se.webstep.calc.exception.WrongTrollNumberException;
 
 import java.util.Arrays;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.stream.Stream;
 /**
  * Help methods for the TrollNumber classes
  */
-public class TrollUtils {
+class TrollUtils {
 
     private TrollUtils() {
         // I'm a util class, don't instantiate me please
