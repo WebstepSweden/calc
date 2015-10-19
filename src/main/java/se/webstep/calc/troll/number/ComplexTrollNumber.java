@@ -3,7 +3,7 @@ package se.webstep.calc.troll.number;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class ComplexTrollNumber implements TrollNumber {
+class ComplexTrollNumber implements TrollNumber {
     private List<SimpleTrollNumber> numbers;
 
     public ComplexTrollNumber(List<SimpleTrollNumber> numbers) {

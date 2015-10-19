@@ -5,12 +5,13 @@ import se.webstep.calc.troll.exception.WrongTrollNumberException;
 import java.util.Arrays;
 import java.util.Optional;
 
-public enum SimpleTrollNumber implements TrollNumber {
+enum SimpleTrollNumber implements TrollNumber {
 
     ONE(1, "ONE"),
     TWO(2, "TWO"),
     THREE(3, "THREE"),
-    MANY(4, "MANY");
+    MANY(4, "MANY"),
+    LOTS(16, "LOTS");
 
     private int value;
     private String text;

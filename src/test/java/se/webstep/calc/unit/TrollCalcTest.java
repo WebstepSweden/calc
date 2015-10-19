@@ -1,11 +1,13 @@
 package se.webstep.calc.unit;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 import org.junit.Before;
 import org.junit.Test;
 import se.webstep.calc.TrollCalc;
 import se.webstep.calc.troll.exception.TrollsDontDoBigNumbersException;
+import se.webstep.calc.troll.exception.TrollsDontDoNegativeNumbersException;
+import se.webstep.calc.troll.exception.WrongTrollNumberException;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class TrollCalcTest {
 
@@ -80,5 +82,60 @@ public class TrollCalcTest {
         tc.plus("MANY-MANY-MANY");
         tc.plus("TWO");
         tc.plus("THREE");
+    }
+
+    @Test
+    public void substractSimpleNumberTest() throws Exception {
+        tc.plus("THREE");
+        tc.minus("ONE");
+        assertThat(tc.result()).isEqualTo(2);
+        assertThat(tc.toString()).isEqualTo("TWO");
+    }
+
+    @Test
+    public void substractComplexNumberTest() throws Exception {
+        tc.plus("LOTS");
+        tc.minus("MANY-ONE");
+        assertThat(tc.result()).isEqualTo(11);
+        assertThat(tc.toString()).isEqualTo("MANY-MANY-THREE");
+    }
+
+    @Test
+    public void substractTwoSimpleNumbersTest() throws Exception {
+        tc.plus("MANY");
+        tc.minus("ONE");
+        tc.minus("TWO");
+        assertThat(tc.result()).isEqualTo(1);
+        assertThat(tc.toString()).isEqualTo("ONE");
+    }
+
+    @Test
+    public void substractASimpleAndAComplexNumberTest() throws Exception {
+        tc.plus("LOTS");
+        tc.minus("MANY-ONE");
+        tc.minus("TWO");
+        assertThat(tc.result()).isEqualTo(9);
+        assertThat(tc.toString()).isEqualTo("MANY-MANY-ONE");
+    }
+
+    @Test
+    public void substractTwoComplexNumbersTest() throws Exception {
+        tc.plus("LOTS");
+        tc.minus("MANY-ONE");
+        tc.minus("MANY-MANY-TWO");
+        assertThat(tc.result()).isEqualTo(1);
+        assertThat(tc.toString()).isEqualTo("ONE");
+    }
+
+    @Test(expected = WrongTrollNumberException.class)
+    public void substractionThatResultsInZeroShouldThrowExceptionTest() throws Exception {
+        tc.plus("THREE");
+        tc.minus("THREE");
+    }
+
+    @Test(expected = TrollsDontDoNegativeNumbersException.class)
+    public void substractionThatResultsInANegativeNumberShouldThrowExceptionTest() throws Exception {
+        tc.plus("THREE");
+        tc.minus("MANY");
     }
 }

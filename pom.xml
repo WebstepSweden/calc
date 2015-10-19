@@ -13,6 +13,7 @@
         <junit.version>4.12</junit.version>
         <cucumber.version>1.2.4</cucumber.version>
         <maven.compiler.version>3.3</maven.compiler.version>
+        <maven.javadoc.plugin.version>2.10.3</maven.javadoc.plugin.version>
     </properties>
 
     <dependencies>
@@ -57,6 +58,11 @@
                     <target>${java.version}</target>
                     <compilerArgument>-Werror</compilerArgument>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${maven.javadoc.plugin.version}</version>
             </plugin>
         </plugins>
     </build>

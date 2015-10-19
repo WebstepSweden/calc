@@ -1,12 +1,11 @@
 package se.webstep.calc.troll.exception;
 
+/**
+ * An exception that should be thrown when trying to construct a negative troll number
+ */
 public class TrollsDontDoNegativeNumbersException extends RuntimeException {
 
     public TrollsDontDoNegativeNumbersException(String message) {
         super(message);
-    }
-
-    public TrollsDontDoNegativeNumbersException(String message, Throwable cause) {
-        super(message, cause);
     }
 }

@@ -1,11 +1,8 @@
-package se.webstep.calc.troll.util;
+package se.webstep.calc.troll.number;
 
 import se.webstep.calc.troll.exception.TrollsDontDoBigNumbersException;
 import se.webstep.calc.troll.exception.TrollsDontDoNegativeNumbersException;
 import se.webstep.calc.troll.exception.WrongTrollNumberException;
-import se.webstep.calc.troll.number.ComplexTrollNumber;
-import se.webstep.calc.troll.number.SimpleTrollNumber;
-import se.webstep.calc.troll.number.TrollNumber;
 
 import java.util.Arrays;
 import java.util.List;
@@ -28,7 +25,7 @@ public class TrollUtils {
      * @return a TrollNumber
      * @throws WrongTrollNumberException if the String could not be parsed
      */
-    public static TrollNumber parseTrollNumbers(String trollNumber) {
+    public static TrollNumber parseStringToTrollNumber(String trollNumber) {
         if (trollNumber == null || trollNumber.isEmpty()) {
             throw new WrongTrollNumberException("Troll number is empty. Human is stupid.");
         }
@@ -58,7 +55,7 @@ public class TrollUtils {
      * @throws TrollsDontDoNegativeNumbersException if the int is negative
      * @throws TrollsDontDoBigNumbersException      if the int is too big
      */
-    public static TrollNumber parseTrollNumber(int trollNumber) {
+    public static TrollNumber parseIntToTrollNumber(int trollNumber) {
         checkForTooSmallOrTooBigNumbers(trollNumber);
 
         int numberOfManys = trollNumber / 4;
@@ -84,7 +81,7 @@ public class TrollUtils {
      * @throws TrollsDontDoNegativeNumbersException if the int is negative
      * @throws TrollsDontDoBigNumbersException      if the int is too big
      */
-    public static void checkForTooSmallOrTooBigNumbers(int number) {
+    private static void checkForTooSmallOrTooBigNumbers(int number) {
         if (number < 0) {
             throw new TrollsDontDoNegativeNumbersException("Trolls don't get " + number);
         }
