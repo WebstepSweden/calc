@@ -1,3 +1,5 @@
 language: java
 jdk:
   - oraclejdk8
+notifications:
+  slack: webstep-nerds:B1hdg8gyrY9hkEOfpQngVSxE
