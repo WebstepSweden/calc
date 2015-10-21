@@ -21,7 +21,22 @@ public class IntCalcSteps {
         calc.plus(number);
     }
 
-    @Så("^ska resultatet vara (\\d+)$")
+    @När("^jag subtraherar (.*)$")
+    public void i_subtract(int number) throws Throwable {
+        calc.minus(number);
+    }
+
+    @När("^jag multiplicerar med (.*)$")
+    public void i_multipliply_by(int number) throws Throwable {
+        calc.multiplyBy(number);
+    }
+
+    @När("^jag dividerar med (.*)$")
+    public void i_divide_by(int number) throws Throwable {
+        calc.divideBy(number);
+    }
+
+    @Så("^ska resultatet vara (.*)$")
     public void result_should_be(int number) throws Throwable {
         assertThat(calc.result()).isEqualTo(number);
     }
