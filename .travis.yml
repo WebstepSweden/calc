@@ -3,3 +3,7 @@ jdk:
   - oraclejdk8
 notifications:
   slack: webstep-nerds:B1hdg8gyrY9hkEOfpQngVSxE
+before_install:
+  - pip install --user codecov
+after_success:
+  - codecov
