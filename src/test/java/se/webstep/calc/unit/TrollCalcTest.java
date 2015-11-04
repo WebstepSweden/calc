@@ -38,6 +38,16 @@ public class TrollCalcTest {
         tc.plus("ONE-GRR");
     }
 
+    @Test(expected = WrongTrollNumberException.class)
+    public void addNullTrollNumberTest() throws Exception {
+        tc.plus(null);
+    }
+
+    @Test(expected = WrongTrollNumberException.class)
+    public void addEmptyTrollNumberTest() throws Exception {
+        tc.plus("");
+    }
+
     @Test
     public void addTwoSimpleNumbersTest() throws Exception {
         tc.plus("TWO");
