@@ -33,6 +33,11 @@ public class TrollCalcTest {
         assertThat(tc.toString()).isEqualTo("ONE");
     }
 
+    @Test(expected = WrongTrollNumberException.class)
+    public void addAWrongComplexNumberTest() throws Exception {
+        tc.plus("ONE-GRR");
+    }
+
     @Test
     public void addTwoSimpleNumbersTest() throws Exception {
         tc.plus("TWO");
