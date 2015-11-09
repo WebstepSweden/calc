@@ -4,7 +4,7 @@
 Egenskap: Beräkningar med miniräknaren
 
   Scenario: När jag nollställer miniräknaren ska resultatet vara 0
-    Givet jag nollställer miniräknaren
+    När jag nollställer miniräknaren
     Så ska resultatet vara 0
 
   Abstrakt Scenario: Addition av två heltal ska ge korrekt resultat
