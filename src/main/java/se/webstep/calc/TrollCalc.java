@@ -79,6 +79,10 @@ public class TrollCalc {
     }
 
     public String toString() {
+        if (trollNumber == null) {
+            return "";
+        }
+
         return trollNumber.getText();
     }
 }

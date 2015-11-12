@@ -27,7 +27,7 @@ public class IntCalcSteps {
     }
 
     @När("^jag multiplicerar med (.*)$")
-    public void i_multipliply_by(int number) throws Throwable {
+    public void i_multiply_by(int number) throws Throwable {
         calc.multiplyBy(number);
     }
 

@@ -81,4 +81,9 @@ public class IntCalc {
     public void reset() {
         this.value = 0;
     }
+
+    @Override
+    public String toString() {
+        return "" + result();
+    }
 }

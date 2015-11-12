@@ -19,6 +19,11 @@ public class TrollCalcTest {
     }
 
     @Test
+    public void toStringIfNullValueTest() throws Exception {
+        assertThat(tc.toString()).isEmpty();
+    }
+
+    @Test
     public void resetTest() throws Exception {
         assertThat(tc.result()).isEqualTo(0);
         tc.plus("THREE");
